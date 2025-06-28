@@ -1,6 +1,6 @@
 #pragma once
 
-#include <JuceHeader.h>
+#include <juce_audio_processors/juce_audio_processors.h>
 #include "TB303Synth.h"
 
 class TB303EmulatorAudioProcessor : public juce::AudioProcessor
