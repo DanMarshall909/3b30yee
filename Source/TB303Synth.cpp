@@ -1,4 +1,5 @@
 #include "TB303Synth.h"
+#include "TB303Voice.h"
 
 TB303Synth::TB303Synth()
 {

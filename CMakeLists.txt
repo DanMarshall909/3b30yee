@@ -84,8 +84,17 @@ elseif(UNIX AND NOT APPLE)
     # Linux dependencies
     find_package(PkgConfig REQUIRED)
     pkg_check_modules(ALSA REQUIRED alsa)
-    target_link_libraries(TB303Emulator PRIVATE ${ALSA_LIBRARIES})
-    target_include_directories(TB303Emulator PRIVATE ${ALSA_INCLUDE_DIRS})
+    pkg_check_modules(FREETYPE REQUIRED freetype2)
+    pkg_check_modules(X11 REQUIRED x11 xext xrandr xinerama xcursor)
+    
+    target_link_libraries(TB303Emulator PRIVATE 
+        ${ALSA_LIBRARIES}
+        ${FREETYPE_LIBRARIES}
+        ${X11_LIBRARIES})
+    target_include_directories(TB303Emulator PRIVATE 
+        ${ALSA_INCLUDE_DIRS}
+        ${FREETYPE_INCLUDE_DIRS}
+        ${X11_INCLUDE_DIRS})
     
     # Optional JACK support
     pkg_check_modules(JACK jack)

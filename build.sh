@@ -21,10 +21,10 @@ case "$(uname -s)" in
     Linux*)
         echo "Setting up Linux build..."
         # Check for required packages
-        if ! dpkg -l | grep -q libasound2-dev; then
+        if ! pkg-config --exists alsa; then
             echo "Installing required packages..."
             sudo apt-get update
-            sudo apt-get install -y build-essential cmake libasound2-dev libjack-jackd2-dev pkg-config
+            sudo apt-get install -y build-essential cmake libasound2-dev libjack-jackd2-dev pkg-config libfreetype6-dev libx11-dev libxext-dev libxrandr-dev libxinerama-dev libxcursor-dev
         fi
         CMAKE_ARGS=""
         ;;

@@ -1,7 +1,8 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include "TB303Voice.h"
+
+class TB303Voice;
 
 class TB303Sound : public juce::SynthesiserSound
 {
