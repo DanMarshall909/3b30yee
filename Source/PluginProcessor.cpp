@@ -1,5 +1,6 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
+#include "TB303Voice.h"
 
 TB303EmulatorAudioProcessor::TB303EmulatorAudioProcessor()
 #ifndef JucePlugin_PreferredChannelConfigurations

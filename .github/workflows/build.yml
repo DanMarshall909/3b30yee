@@ -55,8 +55,12 @@ jobs:
           # Windows: Create ZIP with VST3 and Standalone using PowerShell
           powershell -Command "Compress-Archive -Path VST3/, Standalone/ -DestinationPath ../../../packages/TB303Emulator-Windows-${{ matrix.build_type }}.zip"
         elif [ "${{ runner.os }}" == "macOS" ]; then
-          # macOS: Create ZIP with VST3, AU, and Standalone
-          zip -r ../../../packages/TB303Emulator-macOS-${{ matrix.build_type }}.zip VST3/ AU/ Standalone/
+          # macOS: Create ZIP with VST3, AU (if exists), and Standalone
+          if [ -d "AU" ]; then
+            zip -r ../../../packages/TB303Emulator-macOS-${{ matrix.build_type }}.zip VST3/ AU/ Standalone/
+          else
+            zip -r ../../../packages/TB303Emulator-macOS-${{ matrix.build_type }}.zip VST3/ Standalone/
+          fi
         else
           # Linux: Create tar.gz with VST3 and Standalone
           tar -czf ../../../packages/TB303Emulator-Linux-${{ matrix.build_type }}.tar.gz VST3/ Standalone/
