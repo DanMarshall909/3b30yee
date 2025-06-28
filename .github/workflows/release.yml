@@ -83,9 +83,7 @@ jobs:
         
         git add CMakeLists.txt
         git commit -m "Bump version to $NEW_VERSION"
-        git tag -a "v$NEW_VERSION" -m "Release $NEW_VERSION
-
-$RELEASE_NOTES"
+        git tag -a "v$NEW_VERSION" -m "Release $NEW_VERSION - $RELEASE_NOTES"
         
         git push origin main
         git push origin "v$NEW_VERSION"
