@@ -115,3 +115,9 @@ elseif(APPLE)
         "-framework AudioToolbox"
         "-framework Accelerate")
 endif()
+
+# Add tests (optional)
+option(BUILD_TESTS "Build unit tests" OFF)
+if(BUILD_TESTS)
+    add_subdirectory(Tests)
+endif()
