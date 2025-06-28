@@ -1,7 +1,6 @@
 #pragma once
 
-#include <juce_audio_basics/juce_audio_basics.h>
-#include <juce_audio_processors/juce_audio_processors.h>
+#include <JuceHeader.h>
 
 class TB303Voice;
 
