@@ -1,0 +1,96 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+Builds/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+*.cmake
+!CMakeLists.txt
+
+# Compiled files
+*.o
+*.obj
+*.lo
+*.slo
+*.ko
+*.elf
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# VST/Plugin builds
+*.vst
+*.vst3
+*.component
+*.aaxplugin
+
+# JUCE
+JuceLibraryCode/
+*.jucer
+
+# Xcode
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+DerivedData/
+
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.opensdf
+*.sdf
+*.suo
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.VC.db
+*.VC.opendb
+
+# Debug/Release folders
+Debug/
+Release/
+x64/
+x86/
+
+# Dependencies
+_deps/
+
+# Backup files
+*~
+*.bak
+*.tmp
+*.temp
